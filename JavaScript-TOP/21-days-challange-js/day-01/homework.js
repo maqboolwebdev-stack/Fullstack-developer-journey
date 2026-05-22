@@ -21,3 +21,10 @@ for(let i = 1; i <= num2; i++) {
 }
 console.log(sumOfOddNum);
 
+// Q3 Print the cubes of numbers from 1 to N
+
+let num3 = 5;
+
+for(let i = 1; i <= num3; i++) {
+    console.log(i ** 3);
+};
