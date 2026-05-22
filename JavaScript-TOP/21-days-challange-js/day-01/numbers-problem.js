@@ -43,3 +43,15 @@ for(let i = 1; i <= number4; i++) {
 }
 console.log(f);
 console.timeEnd();
+
+// Q6 Sum of All Even numbers up to n
+
+let number5 = 21;
+let sumOfEven = 0;
+for(let i = 1; i <= number5; i++) {
+    if(i % 2 === 0) {
+        sumOfEven = i + sumOfEven;
+        // console.log(i);
+    }
+}
+console.log(sumOfEven);
