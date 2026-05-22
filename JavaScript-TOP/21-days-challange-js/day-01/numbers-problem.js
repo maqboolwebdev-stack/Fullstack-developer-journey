@@ -55,3 +55,12 @@ for(let i = 1; i <= number5; i++) {
     }
 }
 console.log(sumOfEven);
+
+// Q7 Print squares of numbers from 1 to N**
+
+let number6 = 10;
+for(let i = 1; i <= number6; i++) {
+    // console.log(i ** 2);  // one way of solution
+    // console.log(i * i);  // two way of solution
+    console.log(Math.pow(i, 2)); // optimize solution
+}
