@@ -28,3 +28,13 @@ let num3 = 5;
 for(let i = 1; i <= num3; i++) {
     console.log(i ** 3);
 };
+
+// Q4 Print only the numbers that are both even and perfect squares
+
+let num4 = 20;
+
+for (let i = 1; i <= num4; i++) {
+    if (i % 2 === 0 && Number.isInteger(Math.sqrt(i))) {
+        console.log(i);
+    }
+}
