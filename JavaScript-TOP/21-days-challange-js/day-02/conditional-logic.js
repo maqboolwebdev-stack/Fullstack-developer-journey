@@ -57,3 +57,23 @@ function calculateElectricityBill(units) {
 };
 
 calculateElectricityBill(230);
+
+// Check if a Character is vowel or consonant
+
+function characterChecker(letter) {
+    if(!letter === isNaN) {
+        return console.log();
+    }
+    if(letter === 'a' || 
+        letter === 'e' ||
+        letter === 'i' ||
+        letter === 'o' ||
+        letter === 'u') {
+        console.log('Vowel');
+    } else {
+        console.log('Consonant');
+    }
+};
+
+characterChecker('e');
+characterChecker('z');
