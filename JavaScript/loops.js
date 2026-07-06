@@ -204,3 +204,22 @@ for(let i = 0; i < names3.length; i++) {
 }
 
 console.log(names3);
+
+
+// Practice exercise 5.5
+
+
+const grid = [];
+const row = [];
+const cells = 64;
+let count = 0;
+
+for(let i = 0; i <= cells + 1; i++) {
+    if(count % 8 === 0) {
+        row.push(count);
+    }
+   grid.push(row);
+   count++;
+}
+
+console.table(grid);
