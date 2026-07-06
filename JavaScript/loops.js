@@ -286,3 +286,37 @@ let newArr = ['mia', 22, 'Pakistan'];
 for (prop in newArr) {
     console.log(newArr[prop]);
 }
+
+// Looping over objects by converting to an array
+
+let car2 = {
+    model: 'Land cruiser',
+    make: 'Toyota',
+    year: 2026,
+    color: 'white',
+}
+
+let arrayKeys = Object.keys(car2);
+
+console.log(arrayKeys);
+
+for (key of Object.keys(car2)) {
+    console.log(key);
+}
+
+for (key of Object.values(car2)) {
+    console.log(key);
+}
+
+for (let i = 0; i < arrayKeys.length; i++) {
+    console.log(arrayKeys[i] + ': ' + car2[arrayKeys[i]]);
+}
+
+let arrayEntries = Object.entries(car2);
+
+console.log(arrayEntries);
+
+for (let [key, value] of Object.entries(car2)) {
+    console.log(key,':', value);
+}
+
