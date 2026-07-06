@@ -320,3 +320,49 @@ for (let [key, value] of Object.entries(car2)) {
     console.log(key,':', value);
 }
 
+// Break and continue
+
+let cars = [
+    {
+    model: 'civic',
+    make: 'Honda',
+    year: 2026,
+    color: 'black',
+    },
+    {
+    model: 'Land cruiser',
+    make: 'Toyota',
+    year: 2026,
+    color: 'white',
+    },
+    {
+    model: 'SVG',
+    make: 'fer',
+    year: 2022,
+    color: 'red',
+    },
+    {
+    model: 'Land',
+    make: 'kia',
+    year: 2006,
+    color: 'white',
+    },
+];
+
+for (let i = 0; i < cars.length; i++) {
+    if(cars[i].year >= 2022) {
+        if(cars[i].color === 'red'){
+            console.log(`I have found my car`, cars[i]);
+            break;
+        }
+    }
+}
+
+for (car of cars) {
+    if (car.color !== 'black' ){
+        continue;
+    }
+    if (car.year >= 2026) {
+        console.log(` I have found my cars`, car);
+    }
+}
