@@ -232,3 +232,20 @@ for( name of names4) {
     console.log(name);
 }
 
+// Exercise 5.6
+
+let arr3 = [];
+
+for (let i = 1; i <= 10; i++) {
+    arr3.push(i);
+}
+
+console.log(arr3);
+
+for (let i = arr3.length; i <= arr3.length; i++) {
+    console.log(arr3.length);
+}
+
+for (num of arr3) {
+    console.log(num);
+}
