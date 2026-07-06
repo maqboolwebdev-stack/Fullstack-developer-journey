@@ -223,3 +223,12 @@ for(let i = 0; i <= cells + 1; i++) {
 }
 
 console.table(grid);
+
+// for of loop
+
+let names4 = ['Bob', 'Zia', 'Jon', 'Gru', 'Tai', 'Loo' ];
+
+for( name of names4) {
+    console.log(name);
+}
+
