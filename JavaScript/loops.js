@@ -269,3 +269,20 @@ for (property in car) {
     console.log(property);
 }
 
+// Practice exercise 5.7
+
+let newObj = {
+    name: 'mia',
+    age: 22,
+    country: 'Pakistan',
+}
+
+for (prop in newObj) {
+    console.log(prop + ': ' + newObj[prop]);
+}
+
+let newArr = ['mia', 22, 'Pakistan'];
+
+for (prop in newArr) {
+    console.log(newArr[prop]);
+}
