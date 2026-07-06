@@ -249,3 +249,23 @@ for (let i = arr3.length; i <= arr3.length; i++) {
 for (num of arr3) {
     console.log(num);
 }
+
+// Loops and Objects
+
+// for in loop
+
+let car = {
+    model: 'Land cruiser',
+    make: 'Toyota',
+    year: 2026,
+    color: 'white',
+}
+
+for (property in car) {
+    console.log(car[property]);
+}
+// just log property
+for (property in car) {
+    console.log(property);
+}
+
