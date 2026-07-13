@@ -1,0 +1,308 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --clr-dark: #2e323f;
+  --clr-secondary: #3b4050;
+  --clr-gray: #6f737f;
+  --clr-gold: #a59678;
+  --clr-white: #ffffff;
+
+  --ff-heading: 'Oswald', sans-serif;
+  --ff-body: 'Montserrat', sans-serif;
+
+  --container-width: 1200px;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--clr-dark);
+}
+
+.container {
+  width: min(90%, var(--container-width));
+  margin-inline: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-heading);
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 5.625rem);
+}
+
+h2 {
+  font-size: 2.25rem;
+  color: var(--clr-gold);
+}
+
+h3 {
+  font-size: 1.875rem;
+  color: var(--clr-gold);
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+
+  background: var(--clr-gold);
+  color: white;
+
+  border-radius: 100px;
+
+  font-family: var(--ff-heading);
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+
+.header {
+  background: var(--clr-dark);
+  padding: 1.5rem 0;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-family: var(--ff-heading);
+  font-size: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  font-family: var(--ff-heading);
+  text-transform: uppercase;
+}
+
+
+.hero {
+  background: var(--clr-secondary);
+  color: white;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.hero-left span {
+  color: var(--clr-gold);
+}
+
+.hero-right p {
+  margin-bottom: 2rem;
+}
+
+
+.features {
+  background: #f3f3f3;
+}
+
+.feature-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  text-align: center;
+}
+
+.feature p {
+  margin-top: 1rem;
+  color: var(--clr-gray);
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.content img {
+  margin: 2rem 0;
+}
+
+.content p {
+  margin-top: 1.5rem;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.card {
+  background: var(--clr-secondary);
+  color: white;
+
+  text-align: center;
+
+  padding: 2rem;
+}
+
+.card h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.footer {
+  background: var(--clr-dark);
+  color: white;
+
+  padding: 5rem 0;
+}
+
+.footer > .container > h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.footer h3 {
+  margin-bottom: 1rem;
+}
+
+.footer li {
+  margin-bottom: 0.75rem;
+  color: #d5d5d5;
+}
+
+@media (min-width: 700px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    flex-direction: row;
+  }
+
+  .feature-wrapper {
+    flex-direction: row;
+  }
+
+  .footer-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .hero-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 48%;
+  }
+
+  .content-wrapper {
+    flex-direction: row;
+  }
+
+  .content {
+    width: 65%;
+  }
+
+  .sidebar {
+    width: 35%;
+    margin-top: 0;
+  }
+}
+
+   /* HAMBURGER */
+
+.nav-toggle {
+
+    color: white;
+    font-size: 2rem;
+    border: none;
+    display: block;
+    background: transparent;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: none;
+}
+
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width:700px){
+
+    .nav-toggle{
+        display:none;
+    }
+
+    .nav-links{
+        display:flex !important;
+        flex-direction:row;
+    }
+
+}
