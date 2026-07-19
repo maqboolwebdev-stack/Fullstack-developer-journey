@@ -21,3 +21,20 @@ for (let i = rows; i >= 1; i--) {
   }
   console.log(star);
 }
+
+// pyramid pattern
+
+let pyramidRows = 5;
+
+for (let i = 1; i <= 2 * pyramidRows - 1; i += 2) {
+  let star = '';
+  const currentRow = (i + 1) / 2;
+  for (let j = 1; j <= pyramidRows + currentRow - 1; j++) {
+    if (j <= pyramidRows - currentRow) {
+      star += ' ';
+    } else {
+      star += '*';
+    }
+  }
+  console.log(star);
+}
