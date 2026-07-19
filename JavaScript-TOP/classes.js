@@ -160,3 +160,139 @@ let man = new Data('Anna');
 console.log(man.name);
 
 man = new Data('di');
+
+
+// About class syntax
+
+// Declaration
+// class Rectangle {
+//   constructor(height,width) {
+//     this.height = height;
+//     this.width = width;
+//   }
+// }
+
+//  Expression
+// const Rectangle = class {
+//   constructor(height, width) {
+//     this.height = height;
+//     this.width = width;
+//   }
+// };
+
+// Expression; the class has its own name
+// const Rectangle = class Rectangle2 {
+//   constructor(height, width) {
+//     this.height = height;
+//     this.width = width;
+//   }
+// };
+
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+  // Getter
+  get area() {
+    return this.calcArea();
+  }
+  // Method
+  calcArea() {
+    return this.height * this.width;
+  }
+  *getSides() {
+    yield this.height;
+    yield this.width;
+    yield this.height;
+    yield this.width;
+  }
+}
+
+const square = new Rectangle(10, 10);
+
+console.log(square.area);
+console.log([...square.getSides()]); 
+
+class Point {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+
+  static displayName = "Point";
+  static distance(a, b) {
+    const dx = a.x - b.x;
+    const dy = a.y - b.y;
+
+    return Math.hypot(dx, dy);
+  }
+}
+
+const p1 = new Point(5, 5);
+const p2 = new Point(10, 10);
+p1.displayName; 
+p1.distance; 
+p2.displayName; 
+p2.distance; 
+
+console.log(Point.displayName); 
+console.log(Point.distance(p1, p2)); 
+
+const animal = class dog{
+  bark() {
+    console.log(dog);
+  }
+};
+
+const a = new animal();
+
+a.bark();
+
+class Rectangle3 {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+  // Getter
+  get area() {
+    return this.calcArea();
+  }
+  // Method
+  calcArea() {
+    return this.height * this.width;
+  }
+  *getSides() {
+    yield this.height;
+    yield this.width;
+    yield this.height;
+    yield this.width;
+  }
+}
+
+const square2 = new Rectangle3(10, 10);
+
+console.log(square2.area); // 100
+console.log([...square2.getSides()]); // [10, 10, 10, 10]
+
+class Cat {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    console.log(`${this.name} makes a noise.`);
+  }
+}
+
+class Lion extends Cat {
+  speak() {
+    super.speak();
+    console.log(`${this.name} roars.`);
+  }
+}
+
+const l = new Lion("Fuzzy");
+l.speak();
+// Fuzzy makes a noise.
+// Fuzzy roars.
