@@ -355,3 +355,89 @@ class SomeClass extends class {
 new SomeClass();
 // Base class
 // Derived class
+
+class C {
+  #x;
+  constructor(x) {
+    this.#x = x;
+  }
+  static getX(obj) {
+    if (#x in obj) return obj.#x;
+
+    return "obj must be an instance of C";
+  }
+}
+console.log(C.getX(new C("foo"))); 
+console.log(C.getX(new C(0.196))); 
+console.log(C.getX(new C(new Date()))); 
+console.log(C.getX({})); 
+
+class ClassWithPrivateField {
+  #privateField;
+
+  constructor() {
+    this.#privateField = 42;
+  }
+}
+
+class Subclass extends ClassWithPrivateField {
+  #subPrivateField;
+
+  constructor() {
+    super();
+    this.#subPrivateField = 23;
+  }
+}
+
+new Subclass();
+
+class ClassWithPrivateMethod {
+  #privateMethod() {
+    return 42;
+  }
+
+  publicMethod() {
+    return this.#privateMethod();
+  }
+}
+
+const instance = new ClassWithPrivateMethod();
+console.log(instance.publicMethod());
+
+class ClassWithPrivateAccessor {
+  #message;
+
+  get #decoratedMessage() {
+    return `${this.#message}`;
+  }
+  set #decoratedMessage(msg) {
+    this.#message = msg;
+  }
+
+  constructor() {
+    this.#decoratedMessage = "hello world";
+    console.log(this.#decoratedMessage);
+  }
+}
+
+new ClassWithPrivateAccessor();
+
+class PrivateConstructor {
+  static #isInternalConstructing = false;
+
+  constructor() {
+    if (!PrivateConstructor.#isInternalConstructing) {
+      throw new TypeError("PrivateConstructor is not constructable");
+    }
+    PrivateConstructor.#isInternalConstructing = false;
+  }
+
+  static create() {
+    PrivateConstructor.#isInternalConstructing = true;
+    const instance = new PrivateConstructor();
+    return instance;
+  }
+}
+
+new PrivateConstructor(); 
+PrivateConstructor.create(); 
