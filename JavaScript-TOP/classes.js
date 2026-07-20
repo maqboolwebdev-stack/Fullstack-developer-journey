@@ -296,3 +296,62 @@ const l = new Lion("Fuzzy");
 l.speak();
 // Fuzzy makes a noise.
 // Fuzzy roars.
+
+class Animal {
+  constructor(name,color) {
+    this.name = name;
+    this.color = color;
+  }
+
+  sleep(){
+    console.log(`${this.name} is sleeping!`);
+  }
+
+  eat(){
+    console.log(`${this.name} is eating`);
+  }
+
+  info(){
+    console.log(`Name: ${this.name}, Color: ${this.color}`);
+  }
+}
+
+class Monkey extends Animal {
+  
+}
+
+const animal2 = new Animal('dog', 'brown');
+const m = new Monkey('bru', 'black');
+
+animal2.eat();
+m.info();
+m.sleep();
+
+function OldStyleClass() {
+  this.someProperty = 1;
+}
+OldStyleClass.prototype.someMethod = function () {};
+
+class ChildClass extends OldStyleClass {}
+
+class ModernClass {
+  someProperty = 1;
+  someMethod() {}
+}
+
+class AnotherChildClass extends ModernClass {};
+
+class SomeClass extends class {
+  constructor() {
+    console.log("Base class");
+  }
+} {
+  constructor() {
+    super();
+    console.log("Derived class");
+  }
+}
+
+new SomeClass();
+// Base class
+// Derived class
