@@ -1,3 +1,3 @@
 # Learning-and-Practicing-Web-Development
 
-This repository documents my learning journey through The Odin Project.
+This repository documents my learning journey through [The Odin Project](https://www.theodinproject.com/).
