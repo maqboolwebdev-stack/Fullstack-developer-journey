@@ -1,22 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Inline Form Validation</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <form>
-  <p>
-    <label for="mail">
-      <span>Please enter an email address:</span>
-    </label>
-    <input type="text" id="mail" name="mail" />
-    <span id="error" aria-live="polite"></span>
-  </p>
-  <button>Submit</button>
-</form>
-    <script src="script.js"></script>
+  <div class="form-container">
+    <h2>Create Account</h2>
+    <div id="status-message" class="status-message" aria-live="polite"></div>
+
+    <form id="signup-form" novalidate>
+      <div class="form-control">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error-message" id="email-error"></span>
+      </div>
+
+      <div class="form-control">
+        <label for="country">Country</label>
+        <input type="text" id="country" name="country" required minlength="2">
+        <span class="error-message" id="country-error"></span>
+      </div>
+
+      <div class="form-control">
+        <label for="postal-code">Postal Code</label>
+        <input type="text" id="postal-code" name="postal-code" required pattern="^[A-Za-z0-9\s\-]{3,10}$">
+        <span class="error-message" id="postal-error"></span>
+      </div>
+
+      <div class="form-control">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required minlength="8">
+        <span class="error-message" id="password-error"></span>
+      </div>
+
+      <div class="form-control">
+        <label for="confirm-password">Password Confirmation</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+        <span class="error-message" id="confirm-error"></span>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
