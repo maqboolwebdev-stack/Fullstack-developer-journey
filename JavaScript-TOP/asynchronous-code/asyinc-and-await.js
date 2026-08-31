@@ -94,3 +94,27 @@ addAsync(99).then((sum) => {
   console.log(sum);
 });
 
+const p = new Promise((resolve, reject) => {
+  setTimeout(()=>{
+    resolve('Promise resolved!')
+  }, 1000)
+});
+
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(()=>{
+    resolve('Promise resolved!')
+  }, 3000)
+});
+
+async function handlePromise() {
+  const value = await p;
+  console.log('is it');
+  console.log(value);
+
+  const value2 = await p2;
+  console.log('is it2');
+  console.log(value2);
+
+}
+
+handlePromise();
