@@ -5,3 +5,4 @@ function sum(a, b) {
 sum(2,4);
 
 module.exports = sum;
+
