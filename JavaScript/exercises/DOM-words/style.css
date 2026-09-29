@@ -1,0 +1,33 @@
+body {
+    display: grid;
+    place-items: center;
+}
+.words-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  padding: 16px;
+  height: fit-content;
+  width: 80%;
+}
+
+.word-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 6px;
+  min-height: 44px;
+  background: #f4f6fb;
+  color: rgb(72, 72, 230);
+  border: 1px solid #d9deea;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  word-break: break-word;
+  cursor: pointer;
+  transition: transform .15s, background .2s, color .2s;
+}
+.word-box:hover {
+  transform: translateY(-2px);
+}
