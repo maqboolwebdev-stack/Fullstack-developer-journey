@@ -1,31 +1,25 @@
 function secondLargestNumber(array) {
-// edge case for negative numbers -infinity is the best practice for the negative numbers
-  let maxNumber = -Infinity;
-  let secondLargestNumber = -Infinity;
+  let max = -Infinity;
+  let second = -Infinity;
 
   for (const num of array) {
-    if (num > maxNumber) {
-      maxNumber = num;
-    }
+    if (num > max) max = num;
   }
 
-  const updatedArray = array.filter((num) => num !== maxNumber);
-
-  for (const num of updatedArray) {
-    if (num > secondLargestNumber) {
-      secondLargestNumber = num;
-    }
+  for (const num of array) {
+    if (num !== max && num > second) second = num;
   }
 
-  const result = `Your array is [${array}]: and Second Largest number is '${secondLargestNumber}'`;
-  console.log(result);
+  return second === -Infinity ? null : second;
 }
 
-const array = [10, 34, 934, 34, 25, 872, 63];
+const tests = [
+  [10, 34, 934, 34, 25, 872, 63],
+  [10, 5, 20, 8, 12],
+  [-1, -354, -2, -54, -96, -3],
+  [4, 4, 4],
+];
 
-secondLargestNumber(array);
-secondLargestNumber([10, 5, 20, 8, 12]);
-secondLargestNumber([5, 1, 9, 3]);
-secondLargestNumber([100, 50, 200, 150]);
-
-secondLargestNumber([-1,-354,-2,-54,-96, -3])
+for (const arr of tests) {
+  console.log(`Array [${arr}] -> Second Largest: ${secondLargestNumber(arr)}`);
+}
