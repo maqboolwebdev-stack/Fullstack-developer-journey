@@ -1,5 +1,5 @@
 function palindromeChecker(str) {
-    
+
   if (typeof str !== 'string') {
     console.log('only strings allowed');
     return;
