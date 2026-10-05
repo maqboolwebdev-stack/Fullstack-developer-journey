@@ -40,3 +40,57 @@ function collectNumbersAbove(arr, threshold) {
 }
 
 console.log(collectNumbersAbove(numbers, 10));
+
+function coding(num) {
+  if (num === 0) {
+    console.log('coding has been done!');
+    return;
+  } else {
+    console.log('coding in progress!');
+    coding(num - 1);
+  }
+}
+
+coding(5);
+
+function sumRage(num) {
+  let total = 0;
+  for (let i = num; i > 0; i--) {
+    total += i;
+  }
+  return total;
+}
+
+console.log(sumRage(8));
+
+function sumRageRecursive(num, total = 0) {
+  if (num === 0) {
+    console.log(`this is the totalSum: ${total}`);
+    return total;
+  }
+  return sumRageRecursive(num - 1, total + num);
+}
+
+console.log(sumRageRecursive(8));
+
+function gridPaths(n, m) {
+  if (n === 1 || m === 1) {
+    return 1;
+  } else {
+    return gridPaths(n, m - 1) + gridPaths(n - 1, m);
+  }
+}
+
+console.log(gridPaths(3, 5));
+
+function countPartition(n, m) {
+  if (n === 0) {
+    return 1;
+  } else if (m === 0 || n < 0) {
+    return 0;
+  } else {
+    return countPartition(n - m, m) + countPartition(n, m - 1);
+  }
+}
+
+console.log(countPartition(12, 9));
