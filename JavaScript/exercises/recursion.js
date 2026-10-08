@@ -94,3 +94,23 @@ function countPartition(n, m) {
 }
 
 console.log(countPartition(12, 9));
+
+
+function reverse(str) {
+  if(str.length === 0) {
+    return '';
+  } else {
+    return str[str.length - 1] + reverse(str.slice(0, -1))
+  }
+}
+
+console.log(reverse('Waqas'));
+const getMaxCallStackSize = (i) => {
+  try {
+    return getMaxCallStackSize(++i);
+  } catch {
+    return i;
+  }
+};
+
+console.log(getMaxCallStackSize(0));b
