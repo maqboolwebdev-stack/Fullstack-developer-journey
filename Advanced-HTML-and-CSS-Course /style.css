@@ -132,3 +132,16 @@ div,
     background-color: blue;
     transform: translate(-150%) rotate(45deg) ;
 }
+
+.rotateX {
+  transform: rotateX(60deg);
+}
+
+.rotateY {
+  transform: rotateY(60deg);
+}
+
+.rotateZ {
+  transform: rotateZ(60deg);
+}
+
