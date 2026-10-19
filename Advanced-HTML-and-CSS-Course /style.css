@@ -118,19 +118,19 @@ div,
 
 .red-box,
 .blue-box {
-    /* position: absolute; */
-    height: 100px;
-    width: 100px;
+  /* position: absolute; */
+  height: 100px;
+  width: 100px;
 }
 
 .red-box {
-    background-color: rebeccapurple;
-    transform: rotate(45deg) translate(-150%);
+  background-color: rebeccapurple;
+  transform: rotate(45deg) translate(-150%);
 }
 
 .blue-box {
-    background-color: blue;
-    transform: translate(-150%) rotate(45deg) ;
+  background-color: blue;
+  transform: translate(-150%) rotate(45deg);
 }
 
 .rotateX {
@@ -145,3 +145,26 @@ div,
   transform: rotateZ(60deg);
 }
 
+.element {
+  height: 100px;
+  width: 200px;
+  background-color: slateblue;
+  transform-origin: center();
+  transform: rotate3d(1, -5, 1, -60deg);
+}
+
+.scene {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #CCC;
+  margin: 40px;
+}
+
+.panel {
+  width: 100%;
+  height: 100%;
+  background: red;
+  margin: 0;
+  /* perspective function in transform property */
+  transform: perspective(600px) rotateY(45deg);
+}
