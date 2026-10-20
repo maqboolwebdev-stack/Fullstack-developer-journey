@@ -1,55 +1,108 @@
 .transition-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .btn1 {
-    background-color: transparent;
-    color: transparent;
-    border: 1px solid gray;
-    padding: 10px 20px;
-    transition: all 0.5s ease-out;
-    font-size: 1.2rem;
-    border-radius: 6px;
+  background-color: transparent;
+  color: transparent;
+  border: 1px solid gray;
+  padding: 10px 20px;
+  transition: all 0.5s ease-out;
+  font-size: 1.2rem;
+  border-radius: 6px;
 }
 
 .btn1:hover {
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    border: 1px solid transparent;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border: 1px solid transparent;
 }
 
 .rotate {
-    height: 100px;
-    width: 100px;
-    background-color: black;
-    color: white;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .rotate:hover {
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 50%;
-    color: black;
-    transform: rotate(1turn);
-    cursor: pointer;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 50%;
+  color: black;
+  transform: rotate(1turn);
+  cursor: pointer;
 }
 
 .ball {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: red;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all 1s;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 1s;
 }
 
+.box {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  margin: 0;
+}
+
+.first.box {
+  background-color: maroon;
+  z-index: 1;
+  margin: -30px;
+}
+
+.second.box {
+  background-color: magenta;
+  z-index: 2;
+}
+
+.third.box {
+  background-color: mediumorchid;
+  margin: 29px;
+}
+
+.btn {
+  width: 100px;
+  height: 100px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  /* outline: auto; */
+}
+
+.bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  background-color: mediumslateblue;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  line-height: 1;
+  will-change: transform;
+  transition: transform 450ms;
+  margin: 0;
+}
+
+.btn:hover .bg {
+  transition: transform 150ms;
+  transform: translateY(-10px);
+}
