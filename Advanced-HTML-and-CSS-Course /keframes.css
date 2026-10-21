@@ -1,0 +1,40 @@
+.container {
+    height: 100px;
+    width: 100px;
+    border: 1px solid gray;
+    display: grid;
+    place-items: center;
+}
+
+.colorful-ball {
+    margin: 0;
+    background-color: red;
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
+    border: 2px double black;
+    animation: change-color;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+
+@keyframes change-color {
+    0% {
+        background-color: green;
+    }
+    25% {
+        background-color: purple;
+    }
+    50% {
+        background-color: magenta;
+    }
+    75% {
+        background-color: maroon;
+    }
+    100% {
+        background-color: yellow;
+    }
+}

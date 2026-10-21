@@ -40,7 +40,8 @@ div,
 }
 
 .transform,
-.transitions {
+.transitions,
+.key-frames {
   padding: 1rem;
   border-right: 1px solid;
   display: flex;
