@@ -27,14 +27,47 @@
     }
     25% {
         background-color: purple;
+        transform: scale(1.1);
+        border-radius: 30%;
     }
     50% {
         background-color: magenta;
+        transform: scale(1.2);
     }
     75% {
         background-color: maroon;
+        transform: scale(1.5);
+        border-radius: 10%;
+
     }
     100% {
         background-color: yellow;
+        transform: scale(2);
+        border-radius: 0%;
+    }
+}
+
+.bowling {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: rgb(227 179 103);
+    margin-top: 5rem;
+    animation: throw 3s  infinite;
+    transition: all ease-in-out;
+    position: absolute;
+    top: 0;
+}
+
+
+@keyframes throw {
+    0% {
+        transform: translateY(0vh);
+    }
+    50% {
+        transform: translateY(50vh);
+    }
+    100% {
+        transform: translateY(0vh);
     }
 }
