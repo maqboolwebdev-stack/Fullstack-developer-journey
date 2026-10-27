@@ -1,0 +1,48 @@
+body {
+  background-color: #c1b8b8;
+  margin: 24px;
+}
+
+div {
+  font-size: 2rem;
+}
+
+@media (max-width: 1100px) {
+  body {
+    margin: 8px;
+    background-color: #dab4b4;
+  }
+}
+
+@media (max-width: 1000px) {
+    body {
+        background-color: maroon;
+        color: white;
+    }
+}
+@media (max-width: 900px) {
+    body {
+        background-color: magenta;
+    }
+}
+@media (max-width: 800px) {
+    body {
+        background-color: rebeccapurple;
+    }
+}
+@media (max-width: 700px) {
+    body {
+        background-color: violet;
+        color: black;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        background-color: navy;
+    }
+    div {
+    font-size: 1.3rem;
+    color: whitesmoke;
+  }
+}
