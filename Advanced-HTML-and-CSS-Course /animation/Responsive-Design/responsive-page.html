@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Natural Responsive Page</title>
+    <title>Responsive HTML images demo</title>
     <link rel="stylesheet" href="natural-responsive-page.css" />
   </head>
   <body>
@@ -23,10 +23,17 @@
           tempor, ac pulvinar ligula dapibus.
         </p>
 
-        <img
-          src="elva-800w.jpg"
-          alt="Chris standing up holding his daughter Elva"
-        />
+        <picture>
+          <source
+            media="(width < 800px)"
+            srcset="elva-480w-close-portrait.jpg"
+          />
+          <source media="(width >= 800px)" srcset="elva-800w.jpg" />
+          <img
+            src="elva-800w.jpg"
+            alt="Chris standing up holding his daughter Elva"
+          />
+        </picture>
 
         <p>
           Suspendisse potenti. Ut in luctus eros. Mauris pulvinar vehicula
@@ -36,7 +43,13 @@
           vitae quam vitae nisi iaculis dignissim.
         </p>
 
-        <img src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy" />
+        <img
+          srcset="elva-fairy-480w.jpg 480w, elva-fairy-800w.jpg 800w"
+          sizes="(width <= 600px) 480px,
+                    800px"
+          src="elva-fairy-800w.jpg"
+          alt="Elva dressed as a fairy"
+        />
 
         <p>
           Header image originally by
