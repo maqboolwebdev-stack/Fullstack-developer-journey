@@ -88,3 +88,12 @@ body {
     transform: translateY(0);
   }
 }
+
+h1 {
+  text-align: center;
+}
+
+h1:not(:last-child) {
+  border-bottom: 1px solid red;
+  margin-bottom: 10px;
+}
