@@ -97,3 +97,18 @@ h1:not(:last-child) {
   border-bottom: 1px solid red;
   margin-bottom: 10px;
 }
+
+.gradient-text {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  font-size: clamp(2rem, 8vw, 5rem);
+  background: linear-gradient(to right, red, blue, green);
+  background-clip: text;
+  color: transparent;
+}
