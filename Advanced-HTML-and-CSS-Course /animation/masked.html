@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masking</title>
+    <style>
+      h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 3rem;
+      }
+
+      h1::before {
+        content: '';
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: black;
+        -webkit-mask-image: url(gun.svg);
+        mask-image: url(gun.svg);
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        transition: background-color 0.1s ease;
+        pointer-events: auto;
+        cursor: pointer;
+      }
+
+      h1:hover::before {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Gun</h1>
+  </body>
+</html>
