@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio api</title>
+  </head>
+  <body>
+    <button id="O">Play O-sound</button>
+    <button id="X">Play X-sound</button>
+    <button id="D">Play Draw-sound</button>
+    <button id="W">Play Win-sound</button>
+
+    <script>
+      const OSound = new Audio('../audioes/O-sound.wav');
+      const XSound = new Audio('../audioes/X-sound.wav');
+      const DSound = new Audio('../audioes/draw-sound.wav');
+      const WSound = new Audio('../audioes/success-sound-effect.mp3');
+
+      document.querySelector('#O').addEventListener('click', () => {
+        OSound.currentTime = 0;
+        OSound.play();
+      });
+
+      document.querySelector('#X').addEventListener('click', () => {
+        XSound.currentTime = 0;
+        XSound.play();
+      });
+
+      document.querySelector('#D').addEventListener('click', () => {
+        DSound.currentTime = 0;
+        DSound.play();
+      });
+
+      document.querySelector('#W').addEventListener('click', () => {
+        WSound.currentTime = 0;
+        WSound.play();
+      });
+    </script>
+  </body>
+</html>
