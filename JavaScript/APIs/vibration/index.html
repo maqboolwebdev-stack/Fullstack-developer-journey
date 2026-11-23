@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-6px); }
+      50% { transform: translateX(6px); }
+      75% { transform: translateX(-6px); }
+    }
+
+    .vibrate-screen {
+      animation: shake 0.3s ease-in-out;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="actionBtn">Click Me</button>
+
+  <script>
+    const btn = document.getElementById("actionBtn");
+
+    btn.addEventListener("click", () => {
+      if ("vibrate" in navigator) {
+        navigator.vibrate(300);
+      }
+
+      document.body.classList.add("vibrate-screen");
+
+      setTimeout(() => {
+        document.body.classList.remove("vibrate-screen");
+      }, 300);
+    });
+  </script>
+
+</body>
+</html>
